@@ -11,6 +11,8 @@ import { RoutingModule } from './routing.module';
 import { WidgetDetailsComponent } from './widgets/widget-details/widget-details.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetsComponent } from './widgets/widgets.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, WidgetsComponent, WidgetsListComponent, WidgetDetailsComponent],
@@ -23,6 +25,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     CoreStateModule,
     MaterialModule,
     RoutingModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production, autopause: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],
