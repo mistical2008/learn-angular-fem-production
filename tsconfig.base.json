@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strictTemplates": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -10,8 +11,13 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -19,10 +25,24 @@
       "@fem-production-angular/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
       ],
-      "@fem-production-angular/core-data": ["libs/core-data/src/index.ts"],
-      "@fem-production-angular/core-state": ["libs/core-state/src/index.ts"],
-      "@fem-production-angular/material": ["libs/material/src/index.ts"]
-    }
+      "@fem-production-angular/core-data": [
+        "libs/core-data/src/index.ts"
+      ],
+      "@fem-production-angular/core-state": [
+        "libs/core-state/src/index.ts"
+      ],
+      "@fem-production-angular/material": [
+        "libs/material/src/index.ts"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "@angular/language-service"
+      }
+    ]
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
